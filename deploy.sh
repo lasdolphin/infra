@@ -1,4 +1,10 @@
 #!/bin/bash
+echo "CD to HOME"
+cd ~
+echo `pwd`
+echo "source ~/.rvm/scripts/rvm "
+source ~/.rvm/scripts/rvm
+
 git clone https://github.com/Artemmkin/reddit.git
 cd reddit && bundle install
 puma -d

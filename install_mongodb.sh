@@ -6,7 +6,7 @@ MONGO_CHECK2_EXPECTED="active (running)"
 # sudo apt-get update && sudo apt-get install -y mongodb-org
 # sudo systemctl start mongod
 # sudo systemctl enable mongod
-MONGO_CHECK1=`sudo systemctl status mongod|grep enabled| awk 'BEGIN {FS = ";"} {print $2}'`
+MONGO_CHECK1=`sudo systemctl status mongod|grep enabled| awk 'BEGIN {FS = ";"} {print $2}'|tr -d ' '`
 MONGO_CHECK2=`sudo systemctl status mongod|grep 'active (running)'|awk 'BEGIN {FS = ":"} {print $2}'|awk '{print $1" "$2}'`
 echo "$MONGO_CHECK1_EXPECTED vs $MONGO_CHECK1" 
 echo "$MONGO_CHECK2_EXPECTED vs $MONGO_CHECK2" 

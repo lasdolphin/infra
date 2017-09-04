@@ -1,2 +1,2 @@
 # infra
-infrastructure scripts for  reddit-app
+infrastructure scripts for reddit-app

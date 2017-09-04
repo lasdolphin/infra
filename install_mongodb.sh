@@ -10,7 +10,7 @@ MONGO_CHECK1=`sudo systemctl status mongod|grep enabled| awk 'BEGIN {FS = ";"} {
 MONGO_CHECK2=`sudo systemctl status mongod|grep 'active (running)'|awk 'BEGIN {FS = ":"} {print $2}'|awk '{print $1" "$2}'`
 echo "$MONGO_CHECK1_EXPECTED vs $MONGO_CHECK1" 
 echo "$MONGO_CHECK2_EXPECTED vs $MONGO_CHECK2" 
-if [ "$MONGO_CHECK1" == "$MONGO_CHECK1_EXPECTED" ] && [ "$MONGO_CHECK2" == "$MONGO_CHECK2_EXPECTED" ];
+if [ "$MONGO_CHECK1" == "$MONGO_CHECK1_EXPECTED" ] && [ "$MONGO_CHECK2" == "$MONGO_CHECK2_EXPECTED" ]
 then
     echo "MONGO STARTED SUCCESFULLY"
     exit 0

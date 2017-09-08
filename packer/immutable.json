@@ -1,0 +1,35 @@
+{
+    "variables": {
+        "proj_id" : null,
+        "src_image" : null,
+        "mach_type": "f1-micro"
+    },
+    "builders": [
+        {
+            "type": "googlecompute",
+            "project_id": "{{user `proj_id`}}",
+            "image_name": "reddit-app",
+            "image_family": "reddit-base",
+            "image_description" : "reddit app hw packer week 4",
+            "source_image": "{{user `src_image`}}",
+            "zone": "europe-west1-b",
+            "ssh_username": "appuser",
+            "machine_type": "{{user `mach_type`}}",
+            "tags" : ["puma-server"],
+            "disk_type": "pd-ssd",
+            "disk_size": "10"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "file",
+            "source": "files/puma.service",
+            "destination": "/home/appuser/"
+        },
+        {
+            "type": "shell",
+            "script": "scripts/deploy_packer.sh",
+            "execute_command": "sudo {{.Path}}"
+        }
+    ]
+}

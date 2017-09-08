@@ -16,7 +16,6 @@
             "ssh_username": "appuser",
             "machine_type": "{{user `mach_type`}}",
             "tags" : ["puma-server"],
-            "disk_type": "pd-ssd",
             "disk_size": 10
         }
     ],

@@ -12,3 +12,15 @@ gcloud compute firewall-rules create default-puma-server --allow tcp:9292 --sour
 
 # command to launch packer-backed image
 gcloud compute instances create --image-family=reddit-base --image-project=otus-devops --machine-type=g1-small  --restart-on-failure --zone=europe-west1-b reddit-app
+
+# HW Terraform-2
+
+1. cd /terraform
+2. terrafotm init
+3. terraform get
+4. terraform plan 
+5. terraform apply
+
+- Mongo is not accessible on DB host because of bind address 127.0.0.1
+- added output for db external_ip
+

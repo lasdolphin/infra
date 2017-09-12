@@ -1,0 +1,30 @@
+{
+    "variables": {
+        "proj_id" : null,
+        "src_family": null,
+        "img_name": null,
+        "mach_type": "f1-micro"
+    },
+    "builders": [
+        {
+            "type": "googlecompute",
+            "project_id": "{{user `proj_id`}}",
+            "image_name": "{{user `img_name`}}",
+            "image_family": "reddit-base",
+            "image_description" : "reddit app db",
+            "source_image_family": "{{user `src_family`}}",
+            "zone": "europe-west1-b",
+            "ssh_username": "appuser",
+            "machine_type": "{{user `mach_type`}}",
+            "tags" : ["puma-server"],
+            "disk_size": 10
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "scripts/install_mongodb.sh",
+            "execute_command": "sudo {{.Path}}"
+        }
+    ]
+}

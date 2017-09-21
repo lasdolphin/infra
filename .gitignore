@@ -5,3 +5,4 @@ vars.json
 *.tfstate.backup
 *.tfvars
 *.terraform
+*.retry

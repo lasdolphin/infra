@@ -7,13 +7,18 @@ variable region {
   default     = "europe-west1"
 }
 
-variable public_key_path {
-  description = "path to publick key for ssh"
-}
+// variable public_key_path {
+//   description = "path to publick key for ssh"
+// }
 
 // variable private_key_path {
 //   description = "path to privete key for ssh"
 // }
+
+variable disk_image {
+  description = "Base disk image"
+  default     = "reddit-base-ubuntu"
+}
 
 variable app_disk_image {
   description = "Disk image for reddit app"

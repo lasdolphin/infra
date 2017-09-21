@@ -1,6 +1,6 @@
-variable public_key_path {
-  description = "path to publick key for ssh"
-}
+// variable public_key_path {
+//   description = "path to publick key for ssh"
+// }
 
 // variable private_key_path {
 //   description = "path to publick key for ssh"

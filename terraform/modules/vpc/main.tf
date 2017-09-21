@@ -1,7 +1,7 @@
 resource "google_compute_firewall" "firewall_ssh" {
   name        = "allow-ssh-${var.suffix}"
   network     = "default"
-  description = " ssh inbound rule"
+  description = "ssh inbound rule"
 
   allow {
     protocol = "tcp"

@@ -2,7 +2,7 @@
     "variables": {
         "proj_id" : null,
         "src_family": null,
-        "mach_type": "f1-micro"
+        "mach_type": "g1-small"
     },
     "builders": [
         {
@@ -13,21 +13,10 @@
             "image_description" : "reddit app hw packer week 4",
             "source_image_family": "{{user `src_family`}}",
             "zone": "europe-west1-b",
-            "ssh_username": "appuser",
+            "ssh_username": "ubuntu",
             "machine_type": "{{user `mach_type`}}",
             "tags" : ["puma-server"],
             "disk_size": 10
-        }
-    ],
-    "provisioners": [
-        {
-            "type": "shell",
-            "script": "scripts/install_ruby.sh"
-        },
-        {
-            "type": "shell",
-            "script": "scripts/install_mongodb.sh",
-            "execute_command": "sudo {{.Path}}"
         }
     ]
 }

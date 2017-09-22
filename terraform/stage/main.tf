@@ -15,14 +15,14 @@ provider "google" {
 module "app" {
   source          = "../modules/app"
   suffix          = "${var.env}"
-  // public_key_path = "${var.public_key_path}"
+  public_key_path = "${var.public_key_path}"
   app_disk_image  = "${var.app_disk_image}"
 }
 
 module "db" {
   source          = "../modules/db"
   suffix          = "${var.env}"
-  // public_key_path = "${var.public_key_path}"
+  public_key_path = "${var.public_key_path}"
   db_disk_image   = "${var.db_disk_image}"
 }
 

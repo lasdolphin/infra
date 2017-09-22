@@ -16,5 +16,5 @@ https://support.google.com/cloud/answer/6158849?hl=en&ref_topic=6262490#servicea
 
 5. проверить работу скрипта комадой ansible all -m ping
 
-Подробная инстукция с сайта Ansible
+Подробная инструкция с сайта Ansible
 http://docs.ansible.com/ansible/latest/guide_gce.html

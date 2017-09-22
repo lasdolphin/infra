@@ -6,3 +6,5 @@ vars.json
 *.tfvars
 *.terraform
 *.retry
+inventory/otus-devops-56b15175f329.json
+ansible/inventory/gce.ini

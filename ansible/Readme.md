@@ -7,7 +7,7 @@
 https://support.google.com/cloud/answer/6158849?hl=en&ref_topic=6262490#serviceaccounts
 2. скачать по данной ссылке https://github.com/ansible/ansible/tree/devel/contrib/inventory файлы gce.py и gce.ini
 3. положить файлы в ansible/inventory
-4. настроить gce.ini  мледующим образом.
+4. настроить gce.ini  cледующим образом.
 
 - gce_service_account_email_address = "service account email"
 - gce_service_account_pem_file_path = inventory/<credentians.json>

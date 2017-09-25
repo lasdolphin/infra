@@ -1,0 +1,6 @@
+---
+- include: db.yml
+- include: app.yml
+- include: deploy.yml
+# TODO: описать ситуацию с передачей  env  в динамический инвентарь в ридми.
+# TODO: доделать нгинкс

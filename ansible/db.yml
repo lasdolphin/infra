@@ -1,0 +1,7 @@
+---
+- name: Configure db host
+  hosts: tag_reddit-db-{{ env }}
+  # hosts: tag_reddit-db-stage
+  become: true
+  roles:
+    - db

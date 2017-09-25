@@ -6,5 +6,10 @@ vars.json
 *.tfvars
 *.terraform
 *.retry
-ansible/inventory/otus-devops-56b15175f329.json
-ansible/inventory/gce.ini
+otus-devops-56b15175f329.json
+gce.ini
+gce.py
+credentials/*
+packer/old/*
+ansible/old_files/*
+ansible/roles/jdauphant.nginx/*

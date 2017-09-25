@@ -29,25 +29,6 @@ module "db" {
 module "vpc" {
   source        = "../modules/vpc"
   suffix        = "${var.env}"
-  source_ranges = ["185.23.82.104/32"]
+  source_ranges = ["0.0.0.0/0"]
 }
-
-// connection {
-//     type        = "ssh"
-//     user        = "appuser"
-//     agent       = false
-//     private_key = "${file(var.private_key_path)}"
-//   }
-
-
-//   provisioner "file" {
-//     source      = "files/puma.service"
-//     destination = "/tmp/puma.service"
-//   }
-
-
-//   provisioner "remote-exec" {
-//     script = "files/deploy.sh"
-//   }
-// }
 

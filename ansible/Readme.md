@@ -1,7 +1,8 @@
 # Before running  ansible tasks
+
 you need to create  GCE instaces with terrafom - refer to /terraform dir
 
-# Ansible is set up to work with Dynamic-inventory via gce.py dcript
+# Ansible is set up to work with Dynamic-inventory via gce.py script
 
 - pre requirements
 
@@ -20,11 +21,11 @@ https://support.google.com/cloud/answer/6158849?hl=en&ref_topic=6262490#servicea
 
 # Nginx configuration role
 
-an jdauphant.nginx role from ansible-galaxy is used to install and configure nginx
-you nned to execute
+an jdauphant.nginx role from ansible-galaxy is used
+to install and configure nginx
 
+you need to execute
 ansible-galaxy install -p roles/ -r requirements.yml
-
 to install it
 
 # ENV specification

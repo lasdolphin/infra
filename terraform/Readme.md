@@ -1,4 +1,4 @@
-#This part consist of terraform config files  for instances creation.
+# This part consist of terraform config files  for instances creation.
 
 before using terraform you nned to create images with packer - feref to /packer dir
 
@@ -34,6 +34,8 @@ need to specify variables
 # Delete instances
 
 terraform destroy
+
+# WARNING
 
 - Mongo is not accessible on DB host because of bind address 127.0.0.1
 - added output for db external_ip

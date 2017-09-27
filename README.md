@@ -18,7 +18,7 @@ gcloud compute instances create --image-family=reddit-base --image-project=otus-
 1. cd /terraform
 2. terrafotm init
 3. terraform get
-4. terraform plan 
+4. terraform plan
 5. terraform apply
 
 - Mongo is not accessible on DB host because of bind address 127.0.0.1

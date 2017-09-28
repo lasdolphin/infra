@@ -10,4 +10,3 @@
       changed_when: false
   roles:
     - app
-    # - jdauphant.nginx

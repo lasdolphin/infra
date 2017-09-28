@@ -36,7 +36,7 @@ to specisfy env variable on playbook level use -e env={env} on ansible-playbook 
 ex: ansible-playbook -e env=stage site.yml
 
 # Usage
-- stage env
+- stage env 
 ansible-playbook -e env=stage site.yml
 - prod env
 ansible-playbook -e env=prod -i ./environments/prod/gce.py site.yml

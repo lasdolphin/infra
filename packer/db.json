@@ -23,6 +23,7 @@
     "provisioners": [
         {
             "type": "ansible",
+            "extra_arguments": "--tags=install",
             "playbook_file": "../ansible/packer_reddit_db.yml"
         }
     ]

@@ -2,6 +2,11 @@
 - name: Configure db host
   hosts: tag_reddit-db-{{ env }}
   # hosts: tag_reddit-db-stage
+  gather_facts: false
   become: true
+  pre_tasks:
+    - name: Install python for Ansible
+      raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+      changed_when: false
   roles:
     - db

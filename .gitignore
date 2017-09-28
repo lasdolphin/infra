@@ -13,3 +13,6 @@ credentials/*
 packer/old/*
 ansible/old_files/*
 ansible/roles/jdauphant.nginx/*
+# Vargant
+.vagrant/
+*.logs

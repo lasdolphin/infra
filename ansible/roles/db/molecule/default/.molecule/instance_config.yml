@@ -1,0 +1,8 @@
+# Molecule managed
+
+---
+- address: 127.0.0.1
+  identity_file: /Users/lasdolphin/dev/Otus/DevOps/HW6/infra/ansible/roles/db/molecule/default/.molecule/.vagrant/machines/instance/virtualbox/private_key
+  instance: instance
+  port: '2201'
+  user: ubuntu

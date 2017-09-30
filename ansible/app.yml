@@ -2,7 +2,11 @@
 - name: Configure app host
   hosts: tag_reddit-app-{{ env }}
   # hosts: tag_reddit-app-stage
+  gather_facts: false
   become: true
+  pre_tasks:
+    - name: Install python for Ansible
+      raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+      changed_when: false
   roles:
     - app
-    - jdauphant.nginx

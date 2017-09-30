@@ -1,3 +1,7 @@
 ---
 
 - src: jdauphant.nginx
+
+- name: db
+  src: https://github.com/lasdolphin/infra-db.git
+  version: master
